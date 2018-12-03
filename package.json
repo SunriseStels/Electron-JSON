@@ -1,0 +1,17 @@
+{
+  "name": "el_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.10",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "socket.io": "^2.2.0"
+  }
+}

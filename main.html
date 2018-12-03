@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css">
+</head>
+<body>
+    <ul id="messages"></ul>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script>
+    $(function(){
+        var socket = io();
+        socket.on('base change', function(data){
+            $('#messages li').detach();
+            $(data.posts).each(function(index, val){
+                $('#messages').append($('<li>').text(val.title));
+            })
+        })
+    })
+</script>
+</html>
